@@ -1,0 +1,111 @@
+*{
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #647886;
+}
+
+/* main transition */
+main{
+    position: relative;
+    opacity: 0;
+    filter: blur(8px);
+    transition: opacity 1.5s ease-in-out, filter 1.5s ease-in-out;
+}
+
+.background-image{
+    background-image: url(img/0104.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    padding-top: 25px;
+}
+
+.container-img{
+    display: flex;
+    justify-content: center;
+}
+
+#portrait{
+    border-radius: 50%;
+    height: 25vh; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 20px;
+}
+
+ul{
+    padding: 0;
+}
+
+.container-links{
+    display: flex;
+    justify-content: center;
+    margin-right: 2%;
+    flex-direction: row;
+    margin: 0;
+}
+
+.container-links ul li a img {
+    float: left;
+    padding-left: 0.2em;
+}
+
+.container-links ul li{
+    list-style: none;
+    margin: 28px;
+    border: 3px solid #a87d57;
+    width: 12em;
+    /* Box shadow */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 6px 0px;
+    text-align: center;
+    background-color: #365c76;
+    border-radius: 12px;
+}
+
+.container-links ul li a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-right: 1em;
+    align-items: center;
+}
+
+.container-links ul li:hover{
+    transform: scale(1.1);
+    animation-duration: 2s;
+    animation-delay: 1s;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(1, 0.12, 0, 0.45);
+}
+
+/* Media query mobile */
+@media (min-width:320px)  { 
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    .container-links{
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+    }
+
+    #portrait{
+        height: 30vh;
+    }
+
+    .container-links ul li a {
+        font-size: 1.1;
+    }
+}
